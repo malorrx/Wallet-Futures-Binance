@@ -19,8 +19,6 @@ connection_params = {
     }
 
 
-
-
 def getUSDTbalance():
     balance = client.futures_account_balance()
     futures_account = client.futures_account()
