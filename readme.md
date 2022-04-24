@@ -28,7 +28,9 @@ Wallet connector for trading bot
   - Il faut créer une table dans une base de données nommé Wallet
        - CREATE TABLE wallet (ID INT PRIMARY KEY AUTO_INCREMENT, Balance FLOAT, Unrealized_PNL FLOAT, availableUSDT FLOAT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
   - Création d'un utilisateur user_db qui accède en INSERT, SELECT à database.wallet 
+```SQL
        - CREATE USER wallet@host IDENTIDIEF BY 'password_db';
+```
        - host est l'ip du serveur avec le programme wallet, localhost si la base de données est situé en local
        - GRANT SELEXT, INSERT on database.wallet to wallet@host;
   - Firewall à ouvrir avec port_db sur la machine base de données host_db
