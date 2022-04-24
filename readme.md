@@ -29,7 +29,7 @@ Wallet connector for trading bot
        - CREATE TABLE wallet (ID INT PRIMARY KEY AUTO_INCREMENT, Balance FLOAT, Unrealized_PNL FLOAT, availableUSDT FLOAT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
   - Création d'un utilisateur user_db qui accède en INSERT, SELECT à database.wallet 
        - CREATE USER wallet@host IDENTIDIEF BY 'password_db';
-       - #host est l'ip du serveur avec le programme wallet, localhost si la base de données est situé en local
+       - host est l'ip du serveur avec le programme wallet, localhost si la base de données est situé en local
        - GRANT SELEXT, INSERT on database.wallet to wallet@host;
 
 
