@@ -31,6 +31,6 @@ Wallet connector for trading bot
        - CREATE USER wallet@host IDENTIDIEF BY 'password_db';
        - host est l'ip du serveur avec le programme wallet, localhost si la base de données est situé en local
        - GRANT SELEXT, INSERT on database.wallet to wallet@host;
-
+  - Firewall à ouvrir avec port_db sur la machine base de données host_db
 
 
