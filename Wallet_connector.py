@@ -10,6 +10,17 @@ import mysql.connector
 #connexion à l'API de Binance
 client = Client(config.API_KEY_BINANCE, config.API_SECRET_BINANCE)
 
+connection_params = {
+        'host' : config.host_db,
+        'user': config.user_db,
+        'password' : config.password_db,
+        'database' : config.database,
+        'port' : config.port_db,
+    }
+
+
+
+
 def getUSDTbalance():
     balance = client.futures_account_balance()
     futures_account = client.futures_account()
@@ -22,12 +33,6 @@ def getUSDTbalance():
     return totalWalletBalance, futures_account['totalUnrealizedProfit'], availableBalance
 
 def addBalance(Balance, unrealizedPNL, availUSDT):
-    connection_params = {
-        'host' : config.host_db,
-        'user': config.user_db,
-        'password' : config.password_db,
-        'database' : config.database,
-    }
     request = """insert into wallet
              (Balance, Unrealized_PNL, availableUSDT)
              values (%s, %s, %s)"""
