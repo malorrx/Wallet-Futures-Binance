@@ -27,7 +27,7 @@ Wallet connector for trading bot
   - Base de données situés sur la variable host_db:port_db du fichier config.py
   - Il faut créer une table dans une base de données nommé Wallet
 ```SQL
-       - CREATE TABLE wallet (ID INT PRIMARY KEY AUTO_INCREMENT, Balance FLOAT, Unrealized_PNL FLOAT, availableUSDT FLOAT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE wallet (ID INT PRIMARY KEY AUTO_INCREMENT, Balance FLOAT, Unrealized_PNL FLOAT, availableUSDT FLOAT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 ```
   - Création d'un utilisateur user_db qui accède en INSERT, SELECT à database.wallet 
 ```SQL
