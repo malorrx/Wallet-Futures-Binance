@@ -36,4 +36,14 @@ CREATE USER wallet@host IDENTIDIEF BY 'password_db';
 GRANT SELECT, INSERT on database.wallet to wallet@host;
 ```
   - Firewall à ouvrir avec port_db sur la machine base de données host_db
+  - Utilisation du module python mysql.connector
+```BASH
+python3 -m pip install mysql.connector
+```
 
+## Connection avec Binance
+  - La connection avec Binance se fait grace à paire de clés (public/privée) situé dans le fichier config.py, pour obtenir ces clés API, rendez vous sur votre compte Binance
+  - Un module python est utilisé pour communiquer avec l'API, python-binance, il faut le télécharger
+```BASH
+python3 -m pip install python-binance
+```
