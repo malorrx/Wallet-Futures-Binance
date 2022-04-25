@@ -31,7 +31,7 @@ CREATE TABLE wallet (ID INT PRIMARY KEY AUTO_INCREMENT, Balance FLOAT, Unrealize
 ```
   - Création d'un utilisateur user_db qui accède en INSERT, SELECT à database.wallet 
 ```SQL
-CREATE USER wallet@host IDENTIDIEF BY 'password_db';
+CREATE USER wallet@host IDENTIFIED BY 'password_db';
    # host est l'ip du serveur avec le programme wallet, localhost si la base de données est situé en local
 GRANT SELECT, INSERT on database.wallet to wallet@host;
 ```
