@@ -37,4 +37,3 @@ GRANT SELEXT, INSERT on database.wallet to wallet@host;
 ```
   - Firewall à ouvrir avec port_db sur la machine base de données host_db
 
-
