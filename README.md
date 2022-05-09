@@ -22,6 +22,7 @@ Si vous avez un bot de trading sur votre compte Binance Futures, ce module pytho
 ## Cronjob
   - Créer un cronjob (éxécution à intervalle de temps réguliers) :
   - */<b>X</b> * * * * /bin/python3 /home/user/Wallet/main.py
+    - Remplasser X par l'interval de temps en minutes
 ## Base de données
   - Base de données situés sur la variable host_db:port_db du fichier config.py
   - Il faut créer une table dans une base de données nommé Wallet
