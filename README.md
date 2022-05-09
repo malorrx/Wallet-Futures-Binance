@@ -21,7 +21,7 @@ Si vous avez un bot de trading sur votre compte Binance Futures, ce module pytho
   - Fichier config dans gitignore
 ## Cronjob
   - Créer un cronjob (éxécution à intervalle de temps réguliers) :
-  - */<span style="color: green">X</span> * * * * /bin/python3 /home/user/Wallet/main.py
+  - */<span style="color: #f03c15">X</span> * * * * /bin/python3 /home/user/Wallet/main.py
 ## Base de données
   - Base de données situés sur la variable host_db:port_db du fichier config.py
   - Il faut créer une table dans une base de données nommé Wallet
