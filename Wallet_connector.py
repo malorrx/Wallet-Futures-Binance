@@ -28,7 +28,10 @@ def getUSDTbalance():
         totalWalletBalance = totalWalletBalance + float(actif['balance'])
         availableBalance = availableBalance + float(actif['withdrawAvailable'])
     time.sleep(0.2)
-    return totalWalletBalance, futures_account['totalUnrealizedProfit'], availableBalance
+    unrealizedPNL = 0
+    for actif in futures_account['assets']:
+        unrealizedPNL = unrealizedPNL + float(actif['unrealizedProfit'])
+    return totalWalletBalance, unrealizedPNL, availableBalance
 
 def addBalance(Balance, unrealizedPNL, availUSDT):
     request = """insert into wallet
